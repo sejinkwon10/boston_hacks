@@ -28,23 +28,30 @@ public class SpeechListener extends AsyncTask<Void,String,String> implements ISp
 
     String text="";
     boolean changed;
+    boolean recording;
 
     @Override
     protected String doInBackground(Void[] params) {
-        m_micClient.startMicAndRecognition();
-        while(true) {
+        do{
+            m_micClient.startMicAndRecognition();
+            recording = true;
+
+            while(recording) {
             if(changed);
             {
-                Log.i("*********************","BACKGROUND*********************"+text);
-                publishProgress(text);
-                changed = false;
-                try {
-                    Thread.sleep(100);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
+                    Log.i("*********************", "BACKGROUND*********************" + text);
+                    publishProgress(text);
+                    changed = false;
+                    try {
+                        Thread.sleep(100);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
-        }
+
+            m_micClient.endMicAndRecognition();
+        }while(true);
     }
     TextView textView;
     @Override
@@ -89,6 +96,9 @@ public class SpeechListener extends AsyncTask<Void,String,String> implements ISp
     @Override
     public void onFinalResponseReceived(RecognitionResult recognitionResult) {
         Log.i("*********************","FINALRESP*********************");
+        text = "";
+        changed = true;
+        recording = false;
     }
 
     @Override
@@ -100,7 +110,6 @@ public class SpeechListener extends AsyncTask<Void,String,String> implements ISp
     public void onError(int i, String s) {
         Log.i("*********************","ERROR*********************");
     }
-
     @Override
     public void onAudioEvent(boolean b) {
         Log.i("*********************","AUD EVENT*********************");
