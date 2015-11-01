@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Sejin\Downloads\speech-SpeechToText-SDK-Android\samples\SpeechRecoExample\build\intermediates\exploded-aar\com.microsoft.projectoxford\speechrecognition\0.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f00b9d8d2ac7fb7dae1e25a35ac369c7cdaa81a6">
+        <dex dex="C:\Users\Sejin\Downloads\speech-SpeechToText-SDK-Android\samples\SpeechRecoExample\build\intermediates\pre-dexed\arm\debug\classes-3a60d8485f3100ebd3d1e1f5177af88e20393882.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sejin\Downloads\speech-SpeechToText-SDK-Android\samples\SpeechRecoExample\build\intermediates\exploded-aar\com.microsoft.projectoxford\speechrecognition\0.5.0\jars\libs\SpeechSDK.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="56cbf63c170cf0f0d7adb42feb961ec4eaa9bacf">
+        <dex dex="C:\Users\Sejin\Downloads\speech-SpeechToText-SDK-Android\samples\SpeechRecoExample\build\intermediates\pre-dexed\arm\debug\SpeechSDK-e452375241e726e7d9f4265bf4fd23f0d5fe62ac.jar" />
+    </item>
+
+</items>
