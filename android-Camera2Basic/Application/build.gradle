@@ -21,6 +21,10 @@ dependencies {
     compile "com.android.support:cardview-v7:23.0.0"
     compile 'com.android.support:appcompat-v7:23.0.0'
     compile files('libs/SpeechSDK.jar')
+    //
+    // Use the following line to include client library for Face API from Maven Central Repository
+    //
+    compile 'com.microsoft.projectoxford:face:0.4.91'
 }
 
 // The sample build uses multiple directories to

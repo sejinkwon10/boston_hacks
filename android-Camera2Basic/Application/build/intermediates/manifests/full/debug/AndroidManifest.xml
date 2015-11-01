@@ -34,6 +34,9 @@
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
+    <library>
+    </library>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"

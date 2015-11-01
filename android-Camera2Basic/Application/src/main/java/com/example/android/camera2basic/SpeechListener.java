@@ -39,7 +39,6 @@ public class SpeechListener extends AsyncTask<Void,String,String> implements ISp
             while(recording) {
             if(changed);
             {
-                    Log.i("*********************", "BACKGROUND*********************" + text);
                     publishProgress(text);
                     changed = false;
                     try {
@@ -62,7 +61,6 @@ public class SpeechListener extends AsyncTask<Void,String,String> implements ISp
 
     @Override
     protected void onProgressUpdate(String... s) {
-        Log.i("*********************","PROGRESS UPDATE*********************");
         textView.setText(s[0]);
     }
 

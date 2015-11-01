@@ -42,6 +42,7 @@ import android.hardware.camera2.TotalCaptureResult;
 import android.hardware.camera2.params.StreamConfigurationMap;
 import android.media.Image;
 import android.media.ImageReader;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
@@ -180,9 +181,11 @@ public class Camera2BasicFragment extends Fragment
             // This method is called when the camera is opened.  We start camera preview here.
             mCameraOpenCloseLock.release();
             mCameraDevice = cameraDevice;
-            Log.i("Onopen","hi");
+            Log.i("Onopen", "hi");
             createCameraPreviewSession();
-            new SpeechListener(getActivity()).execute();
+            new SpeechListener(getActivity()).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+            Log.i("******************", "AYYLMAO");
+            new PictureAnalyzer(getActivity()).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         }
 
         @Override
@@ -403,7 +406,6 @@ public class Camera2BasicFragment extends Fragment
     public void onResume() {
         super.onResume();
         startBackgroundThread();
-
         // When the screen is turned off and turned back on, the SurfaceTexture is already
         // available, and "onSurfaceTextureAvailable" will not be called. In that case, we can open
         // a camera and start preview from here (otherwise, we wait until the surface is ready in
@@ -419,6 +421,8 @@ public class Camera2BasicFragment extends Fragment
     public void onPause() {
         closeCamera();
         stopBackgroundThread();
+        new SpeechListener(getActivity()).cancel(true);
+        new PictureAnalyzer(getActivity()).cancel(true);
         super.onPause();
     }
 
@@ -522,7 +526,7 @@ public class Camera2BasicFragment extends Fragment
         Activity activity = getActivity();
         CameraManager manager = (CameraManager) activity.getSystemService(Context.CAMERA_SERVICE);
         try {
-            if (!mCameraOpenCloseLock.tryAcquire(2500, TimeUnit.MILLISECONDS)) {
+            if (!mCameraOpenCloseLock.tryAcquire(5000, TimeUnit.MILLISECONDS)) {
                 throw new RuntimeException("Time out waiting to lock camera opening.");
             }
             manager.openCamera(mCameraId, mStateCallback, mBackgroundHandler);

@@ -89,9 +89,12 @@ MERGED from com.android.support:support-v4:23.0.0:20:5
 MERGED from com.android.support:cardview-v7:23.0.0:20:5
 MERGED from com.android.support:appcompat-v7:23.0.0:20:5
 MERGED from com.android.support:support-v4:23.0.0:20:5
+MERGED from com.microsoft.projectoxford:face:0.4.91:6:5
 	android:targetSdkVersion
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0
 	android:minSdkVersion
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0
+library
+ADDED from com.microsoft.projectoxford:face:0.4.91:10:5
