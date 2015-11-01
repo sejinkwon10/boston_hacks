@@ -2,53 +2,11 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Jerry\Documents\boston_hacks\android-Camera2Basic\Application\build\intermediates\exploded-aar\com.android.support\support-v13\23.0.0\jars\classes.jar"
+        jar="C:\Users\Jerry\Documents\boston_hacks\android-Camera2Basic\Application\libs\SpeechSDK.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="bb0ac3f3ee2d71854501cc28e52cc84a20209b41">
-        <dex dex="C:\Users\Jerry\Documents\boston_hacks\android-Camera2Basic\Application\build\intermediates\pre-dexed\debug\classes-482e0bd955ef2f9944218be4708930af1ba0915c.jar" />
-    </item>
-    <item
-        jar="C:\Users\Jerry\Documents\boston_hacks\android-Camera2Basic\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
-        <dex dex="C:\Users\Jerry\Documents\boston_hacks\android-Camera2Basic\Application\build\intermediates\pre-dexed\debug\internal_impl-23.0.0-332b5bc2042c91344667dc21e2007a1501c96793.jar" />
-    </item>
-    <item
-        jar="C:\Users\Jerry\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.0\support-annotations-23.0.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
-        <dex dex="C:\Users\Jerry\Documents\boston_hacks\android-Camera2Basic\Application\build\intermediates\pre-dexed\debug\support-annotations-23.0.0-d6f31bfe7a799e6b40e77b8ae469310640d2b87d.jar" />
-    </item>
-    <item
-        jar="C:\Users\Jerry\Documents\boston_hacks\android-Camera2Basic\Application\build\intermediates\exploded-aar\com.android.support\support-v13\23.0.0\jars\libs\internal_impl-23.0.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="5d4bccb885c8a89d066ecb6c4addb553a99a79a2">
-        <dex dex="C:\Users\Jerry\Documents\boston_hacks\android-Camera2Basic\Application\build\intermediates\pre-dexed\debug\internal_impl-23.0.0-0d049dc2b3ab1f498cfd84c426d17d0b413c574a.jar" />
-    </item>
-    <item
-        jar="C:\Users\Jerry\Documents\boston_hacks\android-Camera2Basic\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
-        <dex dex="C:\Users\Jerry\Documents\boston_hacks\android-Camera2Basic\Application\build\intermediates\pre-dexed\debug\classes-db996d104d398d978c897cfece45a7ae7c038723.jar" />
-    </item>
-    <item
-        jar="C:\Users\Jerry\Documents\boston_hacks\android-Camera2Basic\Application\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="1ccbc26be2c465c622a48310e8092241b01abe80">
-        <dex dex="C:\Users\Jerry\Documents\boston_hacks\android-Camera2Basic\Application\build\intermediates\pre-dexed\debug\classes-0baaddb7a28006e5b135a49c54c56b3ecc0ed576.jar" />
-    </item>
-    <item
-        jar="C:\Users\Jerry\Documents\boston_hacks\android-Camera2Basic\Application\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="4fcf0b1879f8caf497c073e1432d398e9e2988c1">
-        <dex dex="C:\Users\Jerry\Documents\boston_hacks\android-Camera2Basic\Application\build\intermediates\pre-dexed\debug\classes-50ae2c8045a30a869ed70d647cc39ac04499b21b.jar" />
+        sha1="56cbf63c170cf0f0d7adb42feb961ec4eaa9bacf">
+        <dex dex="C:\Users\Jerry\Documents\boston_hacks\android-Camera2Basic\Application\build\intermediates\pre-dexed\debug\SpeechSDK-d219f84f3e1173b8b623f61059dd3be73b9cb390.jar" />
     </item>
 
 </items>

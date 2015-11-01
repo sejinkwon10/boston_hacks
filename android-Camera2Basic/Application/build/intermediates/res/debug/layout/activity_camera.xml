@@ -20,4 +20,4 @@
     android:layout_height="match_parent"
     android:background="#000"
     tools:context="com.example.android.camera2basic.CameraActivity" />
-<!-- From: file:/C:/Users/Sejin/workspace/boston_hacks/android-Camera2Basic/Application/src/main/res/layout/activity_camera.xml -->
+<!-- From: file:/C:/Users/Jerry/Documents/boston_hacks/android-Camera2Basic/Application/src/main/res/layout/activity_camera.xml -->

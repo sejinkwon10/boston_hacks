@@ -18,8 +18,10 @@ package com.example.android.camera2basic;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.widget.TextView;
 
 public class CameraActivity extends Activity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

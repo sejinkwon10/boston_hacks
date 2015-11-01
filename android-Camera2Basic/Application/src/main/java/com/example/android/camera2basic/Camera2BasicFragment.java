@@ -86,6 +86,7 @@ public class Camera2BasicFragment extends Fragment
         ORIENTATIONS.append(Surface.ROTATION_270, 180);
     }
 
+
     /**
      * Tag for the {@link Log}.
      */
@@ -179,7 +180,9 @@ public class Camera2BasicFragment extends Fragment
             // This method is called when the camera is opened.  We start camera preview here.
             mCameraOpenCloseLock.release();
             mCameraDevice = cameraDevice;
-            createCameraPreviewSession();
+            Log.i("Onopen","hi");
+           // createCameraPreviewSession();
+            new SpeechListener(getActivity()).execute();
         }
 
         @Override
