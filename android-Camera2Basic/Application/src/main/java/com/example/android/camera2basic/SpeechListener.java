@@ -21,6 +21,7 @@ public class SpeechListener extends AsyncTask<Void,String,String> implements ISp
 
     public Activity myActivity;
     public SpeechListener(Activity a){
+        Log.i("*********************","CONSTRUCTOR*********************");
         myActivity = a;
         initializeRecoClient();
     }
@@ -34,20 +35,27 @@ public class SpeechListener extends AsyncTask<Void,String,String> implements ISp
         while(true) {
             if(changed);
             {
-                Log.i("LOGOUT", text);
+                Log.i("*********************","BACKGROUND*********************"+text);
                 publishProgress(text);
                 changed = false;
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
     TextView textView;
     @Override
     protected void onPreExecute() {
+        Log.i("*********************","PREEXECUTE*********************");
         textView = (TextView) myActivity.findViewById(R.id.textView);
     }
 
     @Override
     protected void onProgressUpdate(String... s) {
+        Log.i("*********************","PROGRESS UPDATE*********************");
         textView.setText(s[0]);
     }
 
@@ -58,12 +66,12 @@ public class SpeechListener extends AsyncTask<Void,String,String> implements ISp
 
     void initializeRecoClient()
     {
+        Log.i("*********************","INITRECO*********************");
         String language = "en-us";
-
         String subscriptionKey ="099e24e4629e4a21a51c922e112ed3c2";
 
         if (null == m_micClient) {
-            m_micClient = SpeechRecognitionServiceFactory.createMicrophoneClient(myActivity,
+            m_micClient = SpeechRecognitionServiceFactory.createMicrophoneClient(//myActivity,
                     m_recoMode,
                     language,
                     this,
@@ -73,27 +81,28 @@ public class SpeechListener extends AsyncTask<Void,String,String> implements ISp
 
     @Override
     public void onPartialResponseReceived(String s) {
+        Log.i("*********************","PARTRESP*********************");
         changed = true;
         text = s;
     }
 
     @Override
     public void onFinalResponseReceived(RecognitionResult recognitionResult) {
-
+        Log.i("*********************","FINALRESP*********************");
     }
 
     @Override
     public void onIntentReceived(String s) {
-
+        Log.i("*********************","INTENTRECI*********************");
     }
 
     @Override
     public void onError(int i, String s) {
-
+        Log.i("*********************","ERROR*********************");
     }
 
     @Override
     public void onAudioEvent(boolean b) {
-
+        Log.i("*********************","AUD EVENT*********************");
     }
 }

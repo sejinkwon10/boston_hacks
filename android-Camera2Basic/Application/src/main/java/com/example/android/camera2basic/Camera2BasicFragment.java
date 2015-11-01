@@ -181,7 +181,7 @@ public class Camera2BasicFragment extends Fragment
             mCameraOpenCloseLock.release();
             mCameraDevice = cameraDevice;
             Log.i("Onopen","hi");
-           // createCameraPreviewSession();
+            createCameraPreviewSession();
             new SpeechListener(getActivity()).execute();
         }
 
