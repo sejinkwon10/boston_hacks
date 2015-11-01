@@ -121,7 +121,7 @@ public class PictureAnalyzer extends AsyncTask<Void,Void,Void>{
                 Face maxFace = new Face();
                 for(Face face : result)
                 {
-                    double cur = face.faceRectangle.width * face.faceRectangle.top;
+                    double cur = face.faceRectangle.width * face.faceRectangle.height;
                     if (cur > maxSize);
                     {
                         maxSize = cur;
@@ -135,8 +135,8 @@ public class PictureAnalyzer extends AsyncTask<Void,Void,Void>{
                     @Override
                     public void run() {
                         RelativeLayout rl = (RelativeLayout) myActivity.findViewById(R.id.rel);
-                        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(f.width + 600, RelativeLayout.LayoutParams.WRAP_CONTENT);
-                        params.leftMargin = f.left - 300;
+                        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(f.width + 400, RelativeLayout.LayoutParams.WRAP_CONTENT);
+                        params.leftMargin = f.left - 200;
                         params.topMargin = f.top + f.height;
                         textView.setLayoutParams(params);
                     }
@@ -144,7 +144,7 @@ public class PictureAnalyzer extends AsyncTask<Void,Void,Void>{
             }
 
             try {
-                Thread.sleep(1000);
+                Thread.sleep(500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
